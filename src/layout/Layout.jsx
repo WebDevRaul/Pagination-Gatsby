@@ -5,28 +5,34 @@ import { useStaticQuery, graphql } from "gatsby";
 import Navbar from "./Navbar/Navbar";
 import Footer from "./Footer/Footer";
 
-const Layout = ({ children }) => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `)
+import './layout.scss';
+import LayoutStyled from "./Layout_Styled";
 
+const Layout = ({ children }) => {
+
+  const { site: { siteMetadata: { title } } } = useStaticQuery(getTitle);
+  
   return (
-    <>
-      <Navbar siteTitle={data.site.siteMetadata.title} />
+    <LayoutStyled>
+      <Navbar siteTitle={title} />
         <main>{children}</main>
       <Footer />
-    </>
+    </LayoutStyled>
   )
-}
+};
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
-}
+};
 
-export default Layout
+const getTitle = graphql`
+  query SiteTitleQuery {
+    site {
+      siteMetadata {
+        title
+      }
+    }
+  }
+`
+
+export default Layout;
