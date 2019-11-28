@@ -5,19 +5,20 @@ import { useStaticQuery, graphql } from "gatsby";
 import Navbar from "./Navbar/Navbar";
 import Footer from "./Footer/Footer";
 
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './layout.scss';
-import LayoutStyled from "./Layout_Styled";
+import StyledLayout from "./Styled_Layout";
 
 const Layout = ({ children }) => {
 
   const { site: { siteMetadata: { title } } } = useStaticQuery(getTitle);
   
   return (
-    <LayoutStyled>
+    <StyledLayout>
       <Navbar siteTitle={title} />
         <main>{children}</main>
       <Footer />
-    </LayoutStyled>
+    </StyledLayout>
   )
 };
 

@@ -1,35 +1,33 @@
-import { Link } from "gatsby"
-import PropTypes from "prop-types"
-import React from "react"
+import React, { useState } from "react";
+import PropTypes from "prop-types";
+import classnames from 'classnames';
+import { Link } from "gatsby";
+
+import StyledNavbar from './Styled_Navbar';
 
 const Navbar = ({ siteTitle }) => {
+  const [isOpen, setOpen] = useState(false);
+
+  const onToggle = () => setOpen(!isOpen);
+  const onClick = () => isOpen ? setOpen(false) : null;
+
   return (
-    <header
-      style={{
-        background: `rebeccapurple`,
-        marginBottom: `1.45rem`,
-      }}
-    >
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: 960,
-          padding: `1.45rem 1.0875rem`,
-        }}
-      >
-        <h1 style={{ margin: 0 }}>
-          <Link
-            to="/"
-            style={{
-              color: `white`,
-              textDecoration: `none`,
-            }}
-          >
-            {siteTitle}
-          </Link>
-        </h1>
-      </div>
-    </header>
+    <StyledNavbar>
+      <nav className='navbar navbar-light'>
+        <div className='nav-wrapper'>
+          <div className='nav-header'>
+            <Link to='/'>{siteTitle}</Link>
+            <button type='button' className='navbar-toggler' onClick={onToggle}>
+              <span className="navbar-toggler-icon"></span>
+            </button>
+          </div>
+          <ul className={classnames('nav-links', {'show-nav' : isOpen})} >
+            <li><Link to='/pagination-one' onClick={onClick}>pag 1</Link></li>
+            <li><Link to='/pagination-two' onClick={onClick}>pag 2</Link></li>
+          </ul>
+        </div>
+      </nav>
+    </StyledNavbar>
   )
 }
 

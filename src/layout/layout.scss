@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Lato|Poppins&display=swap');
 
+$primary: rgb(201, 100, 5);
+$secondary: rgb(90, 0, 150);
 $background: rgb(207, 207, 207);
 $transition: all 0.3s linear;
 $spacing: 4px;
@@ -7,6 +9,8 @@ $lightShadow: 2px 5px 3px 0px rgba(0, 0, 0, 0.5);
 $darkShadow: 4px 10px 5px 0px rgba(0, 0, 0, 0.5);
 
 :export {
+  Primary: $primary;
+  Secondary: $secondary;
   Background: $background;
   Transition: $transition;
   Spacing: $spacing;
@@ -35,4 +39,16 @@ h6 {
   font-family: "Poppins", sans-serif;
   margin-bottom: 1.25rem;
   letter-spacing: $spacing;
+}
+
+a:hover {
+  text-decoration: none !important;
+  color: unset !important;
+}
+
+ul {
+  margin-bottom: 0px !important;
+  li{
+    list-style: none !important;
+  }
 }
