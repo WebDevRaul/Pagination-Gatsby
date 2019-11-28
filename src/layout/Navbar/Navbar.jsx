@@ -13,7 +13,7 @@ const Navbar = ({ siteTitle }) => {
 
   return (
     <StyledNavbar>
-      <nav className='navbar navbar-light'>
+      <nav className='navbar navbar-light bg-light'>
         <div className='nav-wrapper'>
           <div className='nav-header'>
             <Link to='/'>{siteTitle}</Link>

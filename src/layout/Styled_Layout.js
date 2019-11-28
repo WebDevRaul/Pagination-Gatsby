@@ -1,8 +1,9 @@
 import styled from 'styled-components';
-import { Background } from './layout.scss';
 
 const StyledLayout = styled.div`
-  background: ${Background};
+  .home {
+    min-height: calc(100vh - 112px);
+  }
 `
 
 export default StyledLayout;

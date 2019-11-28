@@ -5,6 +5,7 @@ $secondary: rgb(90, 0, 150);
 $background: rgb(207, 207, 207);
 $transition: all 0.3s linear;
 $spacing: 4px;
+$border: 4px;
 $lightShadow: 2px 5px 3px 0px rgba(0, 0, 0, 0.5);
 $darkShadow: 4px 10px 5px 0px rgba(0, 0, 0, 0.5);
 
@@ -14,6 +15,7 @@ $darkShadow: 4px 10px 5px 0px rgba(0, 0, 0, 0.5);
   Background: $background;
   Transition: $transition;
   Spacing: $spacing;
+  Border: $border;
   lightShadow: $lightShadow;
   darkShadow: $darkShadow;
 }
