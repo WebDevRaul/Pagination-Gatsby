@@ -1,17 +1,26 @@
-import React from 'react'
+import React from 'react';
 
-const Footer = props => {
+import StyledFooter from './Styled_Footer';
+
+const Footer = () => {
   return (
-    <footer>
-      © {new Date().getFullYear()}, Built with
-      {` `}
-      <a href="https://www.gatsbyjs.org">Gatsby</a>
-    </footer>
+    <StyledFooter>
+      <div className='footer bg-dark text-white text-center pt-2 pb-2'>
+        <div className='row no-gutters'>
+          <div className='col-sm-6'>
+            <div className='footer-text'>
+              <span>Copyright &copy; {new Date().getFullYear()}</span>
+            </div>
+          </div>
+          <div className='col-sm-6'>
+            <div className='footer-text'>
+              <span>Made with Gatsby by Savin Raul-Calin</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </StyledFooter>
   )
-}
-
-Footer.propTypes = {
-
 }
 
 export default Footer;

@@ -93,7 +93,7 @@ const StyledNavbar = styled.nav`
         li {
           a {
             &::after, ::before {
-              display: none
+              display: none;
             }
           }
         }
