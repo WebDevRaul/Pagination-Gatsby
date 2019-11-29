@@ -4,24 +4,20 @@ $primary: rgb(201, 100, 5);
 $secondary: rgb(90, 0, 150);
 $black: rgb(0, 0, 0);
 $white: rgb(255, 255, 255);
-$background: rgb(207, 207, 207);
+$grey: rgb(235, 235, 235);
 $transition: all 0.3s linear;
 $spacing: 4px;
 $border: 4px;
-$lightShadow: 2px 5px 3px 0px rgba(0, 0, 0, 0.5);
-$darkShadow: 4px 10px 5px 0px rgba(0, 0, 0, 0.5);
 
 :export {
   Primary: $primary;
   Secondary: $secondary;
-  White: $white;
   Black: $black;
-  Background: $background;
+  White: $white;
+  Grey: $grey;
   Transition: $transition;
   Spacing: $spacing;
   Border: $border;
-  lightShadow: $lightShadow;
-  darkShadow: $darkShadow;
 }
 
 * {
@@ -55,6 +51,7 @@ a:hover {
 button {
   &:focus {
     outline: none !important;
+    box-shadow: none !important;
   }
 }
 
