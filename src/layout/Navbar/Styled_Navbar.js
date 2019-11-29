@@ -1,18 +1,6 @@
 import styled from 'styled-components';
 import { Primary, Secondary, Spacing, Transition } from '../layout.scss';
 
-const mixin = () => `
-  content: '';
-  position: absolute;
-  display: block;
-  width: 100%;
-  height: 2px;
-  background: ${Primary} !important;
-  z-index: 20;
-  transform: scaleX(0);
-  transition: transform .5s;
-`
-
 const StyledNavbar = styled.nav`
   .navbar {
     .nav-wrapper {
@@ -26,9 +14,6 @@ const StyledNavbar = styled.nav`
         align-items: center;
         button {
           display: none;
-          &:focus {
-            outline: none;
-          }
         }
       }
     .nav-links {
@@ -46,29 +31,8 @@ const StyledNavbar = styled.nav`
         transition: ${Transition};
         a {
           color: ${Primary} !important;
-          &::after {
-            ${mixin};
-            bottom: 0;
-            right: 0;
-            transform-origin: right;
-          }
-          &::before {
-            ${mixin};
-            top: 0;
-            left: 0;
-            transform-origin: left;
-          }
           &:hover {
             color: ${Secondary} !important;
-            cursor: pointer;
-            &::after {
-              transform: scaleX(1);
-              transform-origin: left;
-            }
-            &::before {
-              transform: scaleX(1);
-              transform-origin: right;
-            }
           }
         }
       }
@@ -90,13 +54,6 @@ const StyledNavbar = styled.nav`
         overflow: hidden;
         display: flex;
         flex-direction: column;
-        li {
-          a {
-            &::after, ::before {
-              display: none;
-            }
-          }
-        }
       }
       .show-nav {
         height: 130px;

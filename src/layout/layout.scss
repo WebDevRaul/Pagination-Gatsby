@@ -2,6 +2,8 @@
 
 $primary: rgb(201, 100, 5);
 $secondary: rgb(90, 0, 150);
+$black: rgb(0, 0, 0);
+$white: rgb(255, 255, 255);
 $background: rgb(207, 207, 207);
 $transition: all 0.3s linear;
 $spacing: 4px;
@@ -12,6 +14,8 @@ $darkShadow: 4px 10px 5px 0px rgba(0, 0, 0, 0.5);
 :export {
   Primary: $primary;
   Secondary: $secondary;
+  White: $white;
+  Black: $black;
   Background: $background;
   Transition: $transition;
   Spacing: $spacing;
@@ -46,6 +50,12 @@ h6 {
 a:hover {
   text-decoration: none !important;
   color: unset !important;
+}
+
+button {
+  &:focus {
+    outline: none !important;
+  }
 }
 
 ul {

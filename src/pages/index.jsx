@@ -1,7 +1,8 @@
 import React from "react";
+import { Link } from "gatsby";
 
-import Layout from "../layout/Layout";
 import SEO from "../utils/seo";
+import Layout from "../layout/Layout";
 import CustomButton from "../components/common/buton/Custom_Button";
 
 const IndexPage = () => (
@@ -9,11 +10,11 @@ const IndexPage = () => (
     <SEO title="Home" />
     <div className='home d-flex justify-content-center align-items-center'>
       <>
-        <CustomButton text='JSON PLACEHOLDER' />
-        <CustomButton text='THE MOVIE DB' />
+        <Link to='/pagination-one'><CustomButton text='Example 1' /></Link>
+        <Link to='/pagination-two'><CustomButton text='Example 2' /></Link>
       </>
     </div>
   </Layout>
 )
 
-export default IndexPage
+export default IndexPage;
