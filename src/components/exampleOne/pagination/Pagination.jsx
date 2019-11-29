@@ -1,15 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux'; 
-import { nextPage, prevPage } from '../../redux/actions/exampleOne';
+import { nextPage, prevPage } from '../../../redux/actions/exampleOne';
 import { createStructuredSelector } from 'reselect';
-import { state_example_one_currentPage, state_example_one_pages } from '../../redux/selectors/exampleOne';
+import { state_one_currentPage, state_one_pages, state_one_isLoading } from '../../../redux/selectors/exampleOne';
 import StyledPagination from './Styled_Pagination';
 
 
-const Pagination = ({ current, pages, nextPage, prevPage }) => {
+const Pagination = ({ current, pages, nextPage, prevPage, isLoading }) => {
   const prev = current > 1 ? true : false;
   const next = current < pages ? true : false;
+  if(isLoading) return null;
   return (
     <StyledPagination>
       <div className='pagination'>
@@ -31,12 +32,14 @@ Pagination.propTypes = {
   current: PropTypes.number,
   pages: PropTypes.number,
   nextPage: PropTypes.func.isRequired,
-  prevPage: PropTypes.func.isRequired
+  prevPage: PropTypes.func.isRequired,
+  isLoading: PropTypes.bool.isRequired
 };
 
 const mapStateToProps = createStructuredSelector({
-  current: state_example_one_currentPage,
-  pages: state_example_one_pages
+  current: state_one_currentPage,
+  pages: state_one_pages,
+  isLoading: state_one_isLoading
 });
 
 export default connect(mapStateToProps, { nextPage, prevPage })(Pagination);

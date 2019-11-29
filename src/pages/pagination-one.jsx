@@ -3,13 +3,13 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { updateExampleOne } from '../redux/actions/exampleOne';
 import { createStructuredSelector } from 'reselect';
-import { state_example_one_data } from '../redux/selectors/exampleOne';
+import { state_one_data } from '../redux/selectors/exampleOne';
 import isEmpty from "../components/common/utils/isEmpty";
 
 import Layout from "../layout/Layout";
 import SEO from "../utils/seo"
 import List from "../components/exampleOne/List";
-import Pagination from "../components/exampleOne/Pagination";
+import Pagination from "../components/exampleOne/pagination/Pagination";
 
 const PaginationOne = ({ updateExampleOne, data }) => {
   // Fetch data CDM
@@ -32,7 +32,7 @@ PaginationOne.propTypes = {
 };
 
 const mapStateToProps = createStructuredSelector({
-  data: state_example_one_data
+  data: state_one_data
 });
 
 export default connect(mapStateToProps, { updateExampleOne })(PaginationOne);

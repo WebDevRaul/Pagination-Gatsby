@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Primary, Secondary, Black } from '../../layout/layout.scss';
+import { Primary, Secondary } from '../../../layout/layout.scss';
 
 const StyledPagination = styled.section`
   .pagination {

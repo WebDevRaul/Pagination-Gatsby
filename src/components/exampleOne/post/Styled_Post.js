@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Primary, Secondary, Black, Border, Grey } from '../../layout/layout.scss';
+import { Primary, Secondary, Black, Border, Grey } from '../../../layout/layout.scss';
 
 const StyledPost = styled.div`
   .post {
@@ -10,19 +10,19 @@ const StyledPost = styled.div`
     padding: 10px;
     border: 1px solid ${Black};
     border-radius: ${Border};
-    & h5, p {
-      margin: 0px;
-      padding: 10px;
-    }
     h5 {
       color: ${Primary};
       min-width: 50px;
+      margin: 0px;
+      padding: 10px 5px 10px;
     }
     p {
       display: flex;
       align-items: center;
       width: 100%;
       min-height: 68px;
+      margin: 0px;
+      padding: 10px;
       color: ${Secondary};
       background: ${Grey};
       border-radius: ${Border}; 
