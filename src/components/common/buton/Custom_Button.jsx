@@ -3,10 +3,10 @@ import PropTypes from 'prop-types';
 
 import StyledButon from './Styled_Button';
 
-const CustomButton = ({ text, isClass, onClick, type }) => {
+const CustomButton = ({ text, isClass, type }) => {
   return (
     <StyledButon>
-      <button className={`custom-button ${isClass}`} onClick={onClick} type={type}>
+      <button className={`custom-button ${isClass}`} type={type}>
         {text}
       </button>
     </StyledButon>
@@ -16,7 +16,6 @@ const CustomButton = ({ text, isClass, onClick, type }) => {
 CustomButton.propTypes = {
   text: PropTypes.string.isRequired,
   isClass: PropTypes.string,
-  onClick: PropTypes.func,
   type: PropTypes.string
 }
 

@@ -10,7 +10,7 @@ import StyledPagination from './Styled_Pagination';
 const Pagination = ({ current, pages, nextPage, prevPage, isLoading }) => {
   const prev = current > 1 ? true : false;
   const next = current < pages ? true : false;
-  if(isLoading) return null;
+  if(!pages) return null;
   return (
     <StyledPagination>
       <div className='pagination'>

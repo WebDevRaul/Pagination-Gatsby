@@ -1,15 +1,17 @@
-import React from "react"
-import { Link } from "gatsby"
+import React from "react";
 
 import Layout from "../layout/Layout";
 import SEO from "../utils/seo";
+import Search from "../components/exampleTwo/search/Search";
+import List from "../components/exampleTwo/List";
+import Pagination from "../components/exampleTwo/pagination/Pagination";
 
 const PaginationTwo = () => (
   <Layout>
     <SEO title="Pagination two" />
-    <h1>Hi from the pagination one</h1>
-    <p>Welcome to page 2</p>
-    <Link to="/">Go back to the homepage</Link>
+    <Search />
+    <List />
+    <Pagination />
   </Layout>
 )
 
