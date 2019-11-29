@@ -1,4 +1,4 @@
-import { EXAMPLE_ONE } from '../actions/types';
+import { EXAMPLE_ONE, EXAMPLE_TWO } from '../actions/types';
 
 const INITIAL_STATE = {
   exampleOne: {
@@ -14,6 +14,8 @@ const loading = (state = INITIAL_STATE, action) => {
   switch(action.type) {
     case EXAMPLE_ONE.ERROR:
       return { ...state, exampleOne: { ...state.exampleOne, error: payload } };
+    case EXAMPLE_TWO.ERROR:
+      return { ...state, exampleTwo: { ...state.exampleTwo, error: payload } };
     default:
       return state;
   };

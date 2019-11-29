@@ -1,20 +1,23 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+import { updateMovie } from '../../../redux/actions/exampleTwo';
 import StyledSearch from './Styled_Search';
 import CustomInput from '../../common/input/Custom_Input';
 import CustomButton from '../../common/buton/Custom_Button';
 import isEmpty from '../../common/utils/isEmpty';
 
-const Search = () => {
-  const [input, setInput] = useState('');
+const Search = ({ updateMovie }) => {
+  const [movie, setMovie] = useState('');
 
-  const onChange = e => setInput(e.target.value);
+  const onChange = e => setMovie(e.target.value);
 
   const onSubmit = e => {
     e.preventDefault();
-    if(isEmpty(input)) return;
+    if(isEmpty(movie)) return;
+    updateMovie(movie)
   }
-  
+
   return (
     <StyledSearch>
       <div className='row no-gutters search'>
@@ -23,7 +26,7 @@ const Search = () => {
             <div className='col-6 p-0'>
               <CustomInput
                 name='search'
-                value={input}
+                value={movie}
                 onChange={onChange}
                 label='Search movie'
               />
@@ -36,10 +39,10 @@ const Search = () => {
       </div>
     </StyledSearch>
   )
-}
+};
 
 Search.propTypes = {
+  updateMovie: PropTypes.func.isRequired
+};
 
-}
-
-export default Search;
+export default connect(null, { updateMovie })(Search);

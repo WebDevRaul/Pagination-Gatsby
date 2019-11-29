@@ -1,0 +1,17 @@
+import axios from 'axios';
+import { MOVIE_API_KEY } from '../../config/key';
+import { EXAMPLE_TWO } from './types';
+
+export const updateMovie =  movie => dispatch => {
+  dispatch({ type: EXAMPLE_TWO.LOADING })
+  axios
+    .get(`http://api.themoviedb.org/3/search/movie?api_key=${MOVIE_API_KEY}&query=${movie}`)
+    .then(({ data }) => {
+      dispatch({ type: EXAMPLE_TWO.UPDATE, payload: data });
+      dispatch({ type: EXAMPLE_TWO.LOADED });
+    })
+    .catch(err => {
+      dispatch({ type: EXAMPLE_TWO.ERROR, payload: err.response.data });
+      dispatch({ type: EXAMPLE_TWO.LOADED });
+    })
+}

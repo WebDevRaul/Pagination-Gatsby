@@ -6,10 +6,9 @@ const StyledSearch = styled.section`
     justify-content: center;
     align-items: center;
     & div {
-      width: 100%;
       & :nth-child(2) {
         display: flex;
-        justify-content: flex-end;
+        justify-content: center;
       }
     }
   }
