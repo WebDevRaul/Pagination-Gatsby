@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Black } from '../../../../layout/layout.scss';
+import { Black, White } from '../../../../layout/layout.scss';
 
 const StyledCard = styled.div`
   .flip-card {
@@ -15,6 +15,7 @@ const StyledCard = styled.div`
       transform-style: preserve-3d;
       box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
       .flip-card-front, .flip-card-back {
+        background: ${White};
         position: absolute;
         width: 100%;
         backface-visibility: hidden;

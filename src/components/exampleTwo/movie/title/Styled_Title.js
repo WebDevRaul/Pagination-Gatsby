@@ -3,49 +3,44 @@ import { Black, White, Border } from '../../../../layout/layout.scss';
 
 const StyledTitle = styled.div`
   display: flex;
-  justify-content: center;
+  flex-direction: column-reverse;
   position: relative;
-  width: 100%;
-  :hover > span{
-    display: flex;
-  }
+  min-height: 112px;
   h5 {
-    display: inline-block;
     text-align: center;
-    width: 200px;
+    padding: 10px;
+    margin: 0px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
     cursor: pointer;
+    margin: 0 20px;
+    :hover ~ *{
+      display: block;
+    }
   }
-  .popover {
+  span {
     display: none;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
+    text-align: center;
     width: 100%;
-    top: -50px;
+    position: relative;
+    padding: 10px;
     background-color: ${Black};
     border-radius: ${Border};
-    padding: 10px;
     color: ${White};
     z-index: 10;
-    &:before {
-      content: '';
+  }
+  .helper{
+    display: none;
+    content: '';
       position: absolute;
       width: 10px;
       height: 10px;
-      top: 36px;
+      top: 56%;
+      left: 50%;
       background: ${Black};
       transform: rotate(45deg);
-    }
-  }
-  .show-full-title {
-    height: 64px !important;
-    top: -70px !important;
-    &:before {
-      top: 57px !important;
-    }
+      z-index: 20;
   }
 `
 

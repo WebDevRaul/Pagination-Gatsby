@@ -7,8 +7,9 @@ import StyledTitle from './Styled_Title';
 const Title = ({ title }) => {
   return (
     <StyledTitle>
-      <span className={classnames('popover', {'show-full-title': title.length > 30})}>{title}</span>
       <h5 className='title'>{title}</h5>
+      <i className='helper'></i>
+      <span className={classnames('test', {'show-full-title': title.length > 30})}>{title}</span>
     </StyledTitle>
   )
 }

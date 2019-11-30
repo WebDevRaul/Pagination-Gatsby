@@ -15,7 +15,7 @@ const Movie = ({original_title, poster_path, overview, popularity, vote_count, o
       <div className="card">
         <Title title={original_title} />
         <Card toggle={toggle} path={poster_path} overview={overview} />
-        <div className="card-body">
+        <div className="card-body info">
           <Badge title='Popularity' num={popularity} color='primary' />
           <Badge title='Vote count'  num={vote_count} color='success' />
           <Badge title='Language' num={original_language} color='warning' />
