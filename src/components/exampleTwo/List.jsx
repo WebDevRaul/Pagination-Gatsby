@@ -10,7 +10,10 @@ const List = ({ list }) => {
     <div className='row no-gutters'>
       {
         list &&
-        list.map((movie, index) => <Movie key={index} { ...movie } />)
+        list.map((movie, index) => 
+          <div className='col col-sm-6 col-md-4 col-lg-3'>
+            <Movie key={index} { ...movie } />
+          </div>)
       }
     </div>
   )

@@ -10,9 +10,9 @@ const Badge = ({ title, color, num }) => {
   );
 };
 Badge.propTypes = {
-  title: PropTypes.string.isRequired,
-  color: PropTypes.string.isRequired,
-  num: PropTypes.number.isRequired
+  title: PropTypes.string,
+  color: PropTypes.string,
+  num: PropTypes.oneOfType([ PropTypes.string, PropTypes.number ])
 };
 
 export default Badge;
