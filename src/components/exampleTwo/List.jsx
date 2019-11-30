@@ -7,12 +7,12 @@ import Movie from './movie/Movie';
 
 const List = ({ list }) => {
   return (
-    <div className='row no-gutters'>
+    <div className='row no-gutters pr-4 pl-4'>
       {
         list &&
         list.map((movie, index) => 
-          <div className='col col-sm-6 col-md-4 col-lg-3'>
-            <Movie key={index} { ...movie } />
+          <div key={index} className='col col-sm-6 col-md-4 col-lg-3'>
+            <Movie { ...movie } />
           </div>)
       }
     </div>

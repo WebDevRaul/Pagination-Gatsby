@@ -27,6 +27,11 @@ const StyledToggle = styled.div`
     .slider {
       position: absolute;
       cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 13px 4px 10px;
+      overflow: hidden;
       top: 0;
       left: 0;
       right: 0;
@@ -47,6 +52,24 @@ const StyledToggle = styled.div`
         box-shadow: 0 0 5px rgba(128, 128, 128, 0.5);
         -webkit-transition: ${Transition};
         transition: ${Transition};
+      }
+      .on-off {
+        position: relative;
+        right: -50px;
+        transition: ${Transition};
+      }
+      .on-on {
+        transition: ${Transition};
+        right: 0px;
+      }
+      .off-off {
+        position: relative;
+        left: 0px;
+        transition: ${Transition};
+      }
+      .off-on {
+        transition: ${Transition};
+        left: -50px;
       }
     }
   }
