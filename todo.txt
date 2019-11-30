@@ -1,1 +1,2 @@
 add loading to search btn
+title responsive 

@@ -7,14 +7,14 @@ import Title from './title/Title';
 import StyledMovie from './Styled_Movie';
 import Card from './card/Card';
 
-const Movie = ({original_title, poster_path, popularity, vote_count, original_language, release_date, }) => {
+const Movie = ({original_title, poster_path, overview, popularity, vote_count, original_language, release_date, }) => {
   const [toggle, setToggle] = useState(false);
 
   return (
     <StyledMovie>
       <div className="card">
         <Title title={original_title} />
-        <Card toggle={toggle} path={poster_path} />
+        <Card toggle={toggle} path={poster_path} overview={overview} />
         <div className="card-body">
           <Badge title='Popularity' num={popularity} color='primary' />
           <Badge title='Vote count'  num={vote_count} color='success' />
