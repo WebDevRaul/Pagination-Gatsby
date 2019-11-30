@@ -1,26 +1,30 @@
 import styled from 'styled-components';
-import { Secondary, Black, Transition } from '../../../../layout/layout.scss';
+import { Red, Green, Transition } from '../../../../layout/layout.scss';
 
 const StyledToggle = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   .switch {
     position: relative;
     display: flex;
     width: 90px;
     height: 34px;
-    & input {
+    margin-bottom: 0px;
+    input {
       opacity: 0;
       width: 0;
       height: 0;
-      &:checked + .slider {
-        background-color: ${Black};
+      :checked + .slider {
+        background-color: ${Green};
       }
-      &:checked + .slider:before {
-      -webkit-transform: translateX(55px);
-      -ms-transform: translateX(55px);
-      transform: translateX(55px);
+      :checked + .slider:before {
+        -webkit-transform: translateX(-55px);
+        -ms-transform: translateX(-55px);
+        transform: translateX(-55px);
+      }
     }
-    }
-    & .slider {
+    .slider {
       position: absolute;
       cursor: pointer;
       top: 0;
@@ -28,15 +32,15 @@ const StyledToggle = styled.div`
       right: 0;
       bottom: 0;
       border-radius: 34px;
-      background-color: ${Secondary};
+      background-color: ${Red};
       transition: ${Transition};
       -webkit-transition: ${Transition};
-      &::before {
+      ::before {
         position: absolute;
         content: "";
         height: 26px;
         width: 26px;
-        left: 4px;
+        left: 60px;
         bottom: 4px;
         border-radius: 50%;
         background: linear-gradient(to right, #fff, rgb(202, 202, 202));

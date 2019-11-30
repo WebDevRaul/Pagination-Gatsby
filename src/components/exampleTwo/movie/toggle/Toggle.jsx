@@ -9,6 +9,7 @@ const Toggle = ({ toggle, setToggle }) => {
 
   return (
     <StyledToggle>
+      <h5 className='text-muted'>More info</h5>
       <label className="switch">
         <input type="checkbox" value={toggle} onChange={onChange} />
         <span className="slider"></span>

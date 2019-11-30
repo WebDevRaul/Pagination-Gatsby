@@ -12,7 +12,7 @@ const Movie = ({original_title, poster_path, overview, popularity, vote_count, o
 
   return (
     <StyledMovie>
-      <div className="card">
+      <div className="card mb-4">
         <Title title={original_title} />
         <Card toggle={toggle} path={poster_path} overview={overview} />
         <div className="card-body info">
@@ -21,7 +21,7 @@ const Movie = ({original_title, poster_path, overview, popularity, vote_count, o
           <Badge title='Language' num={original_language} color='warning' />
           <Badge title='Date'  num={release_date} color='danger' />
         </div>
-        <div className="card-body">
+        <div className="card-body p-2 d-flex justify-content-center">
           <Toggle toggle={toggle} setToggle={setToggle} />
         </div>
       </div>
