@@ -4,10 +4,14 @@ import ReactPaginate from 'react-paginate';
 import { connect } from 'react-redux';
 import { nextPage } from '../../../redux/actions/exampleTwo';
 import { createStructuredSelector } from 'reselect';
-import { state_two_pages } from '../../../redux/selectors/exampleTwo';
+import { state_two_pages, state_two_movie } from '../../../redux/selectors/exampleTwo';
 import StyledPagination from './Styled_Pagination';
 
-const Pagination = ({ nextPage, pages }) => {
+const Pagination = ({ nextPage, pages, movie }) => {
+  const changePage = selected => {
+    nextPage({movie, selected});
+    window.scrollTo({top: 170, behavior: 'smooth' });
+  }
   if(pages === 0) return null;
   return (
     <StyledPagination>
@@ -20,9 +24,8 @@ const Pagination = ({ nextPage, pages }) => {
           pageCount={pages}
           marginPagesDisplayed={1}
           pageRangeDisplayed={3}
-          onPageChange={({ selected }) => nextPage({ movie: 'Matrix', page:selected })}
+          onPageChange={({ selected }) => changePage(selected)}
           activeClassName={'active'}
-          // onPageChange={e => window.scrollTo({top: 245, behavior: 'smooth' })}
         />
       </div>
     </StyledPagination>
@@ -31,11 +34,13 @@ const Pagination = ({ nextPage, pages }) => {
 
 Pagination.propTypes = {
   nextPage: PropTypes.func.isRequired,
-  pages: PropTypes.number.isRequired
+  pages: PropTypes.number.isRequired,
+  movie: PropTypes.string.isRequired
 };
 
 const mapStateToProps = createStructuredSelector({
-  pages: state_two_pages
+  pages: state_two_pages,
+  movie: state_two_movie
 });
 
 export default connect(mapStateToProps, { nextPage })(Pagination);

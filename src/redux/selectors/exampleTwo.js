@@ -4,6 +4,11 @@ const select_two_state = state => state.exampleTwo;
 const select_isLoading_state = state => state.loading.exampleTwo;
 const select_errors_state = state => state.error.exampleTwo.error;
 
+export const state_two_movie = createSelector(
+  [select_two_state],
+  state => state.movie
+);
+
 export const state_two_data = createSelector(
   [select_two_state],
   state => state.results

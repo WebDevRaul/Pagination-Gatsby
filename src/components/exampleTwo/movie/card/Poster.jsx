@@ -1,13 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { useStaticQuery, graphql } from "gatsby"
-import Img from "gatsby-image"
+import { useStaticQuery, graphql } from "gatsby";
+import isEmpty from '../../../common/utils/isEmpty';
 
 const Poster = ({ path }) => {
-  const data = useStaticQuery(fetch).placeholderImage.childImageSharp.fluid
+  const data = useStaticQuery(fetch).placeholderImage.childImageSharp.fluid.src
   return (
     <div className='wrapper'>
-      <Img fluid={data} />
+      {
+        !isEmpty(path)
+        ? <img src={`https://image.tmdb.org/t/p/w185${path}`} alt={'poster'} width='100%' height='100%' />
+        : <img src={data} width='100%' height='100%' />
+      }
     </div>
   )
 }
@@ -18,10 +22,10 @@ Poster.propTypes = {
 
 const fetch = graphql`
   query {
-    placeholderImage: file(relativePath: { eq: "questionMark.jpg" }) {
+    placeholderImage: file(relativePath: {eq: "questionMark.jpg"}) {
       childImageSharp {
-        fluid(maxWidth: 235) {
-          ...GatsbyImageSharpFluid
+        fluid {
+          src
         }
       }
     }
