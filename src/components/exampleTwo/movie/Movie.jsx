@@ -12,7 +12,7 @@ const Movie = ({original_title, poster_path, overview, popularity, vote_count, o
 
   return (
     <StyledMovie>
-      <div className="card mb-4">
+      <div className="card mb-2">
         <Title title={original_title} />
         <Card toggle={toggle} path={poster_path} overview={overview} />
         <div className="card-body info">

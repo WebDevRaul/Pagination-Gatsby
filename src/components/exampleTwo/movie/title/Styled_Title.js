@@ -5,7 +5,6 @@ const StyledTitle = styled.div`
   display: flex;
   flex-direction: column-reverse;
   position: relative;
-  min-height: 112px;
   h5 {
     text-align: center;
     padding: 10px;
@@ -21,10 +20,11 @@ const StyledTitle = styled.div`
   }
   span {
     display: none;
-    text-align: center;
+    position: absolute;
+    bottom: 45px;
     width: 100%;
-    position: relative;
     padding: 10px;
+    text-align: center;
     background-color: ${Black};
     border-radius: ${Border};
     color: ${White};
@@ -32,15 +32,15 @@ const StyledTitle = styled.div`
   }
   .helper{
     display: none;
+    position: absolute;
+    bottom: 40px;
+    left: calc(50% - 5px);
     content: '';
-      position: absolute;
-      width: 10px;
-      height: 10px;
-      top: 56%;
-      left: 50%;
-      background: ${Black};
-      transform: rotate(45deg);
-      z-index: 20;
+    width: 10px;
+    height: 10px;
+    background: ${Black};
+    transform: rotate(45deg);
+    z-index: 20;
   }
 `
 

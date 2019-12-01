@@ -10,17 +10,28 @@ import StyledPagination from './Styled_Pagination';
 const Pagination = ({ current, pages, nextPage, prevPage, isLoading }) => {
   const prev = current > 1 ? true : false;
   const next = current < pages ? true : false;
+
+  const onPrevPage = () => {
+    prevPage(current - 1);
+    window.scrollTo({top: 0, behavior: 'smooth' });
+  }
+  
+  const onNextPage = () => {
+    nextPage(current + 1);
+    window.scrollTo({top: 0, behavior: 'smooth' });
+  }
+
   if(!pages) return null;
   return (
     <StyledPagination>
       <div className='pagination'>
-        <button className='btn' disabled={!prev} onClick={() => prevPage(current - 1)}>
+        <button className='btn' disabled={!prev} onClick={onPrevPage}>
           Prev
         </button>
         <div className='buttons'>
           <h5><span>{current}</span><i>-</i><span>{pages}</span></h5>
         </div>
-        <button  className='btn' disabled={!next} onClick={() => nextPage(current + 1)}>
+        <button  className='btn' disabled={!next} onClick={onNextPage}>
           Next
         </button>
       </div>

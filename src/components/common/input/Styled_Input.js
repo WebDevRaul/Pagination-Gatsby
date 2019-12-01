@@ -17,7 +17,7 @@ const StyledInput = styled.div`
       width: 100%;
       margin: 25px 0;
       padding: 10px 10px 0px 0px;
-      background-color: ${White};
+      background-color: transparent;
       border: none;
       border-bottom: 1px solid ${Black};
       &:focus ~ .form-input-label {
@@ -29,6 +29,7 @@ const StyledInput = styled.div`
       position: absolute;
       top: 10px;
       transition: ${Transition};
+      z-index: -10;
       &.shrink {
         ${shrinkLabel}
       }
