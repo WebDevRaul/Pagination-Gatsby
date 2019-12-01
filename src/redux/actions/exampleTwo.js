@@ -20,7 +20,7 @@ export const updateMovie =  movie => dispatch => {
 export const nextPage = ({ movie, selected }) => dispatch => {
   dispatch({ type: EXAMPLE_TWO.LOADING });
   axios
-    .get(`http://api.themoviedb.org/3/search/movie?api_key=${MOVIE_API_KEY}&query=${movie}&page=${selected}`)
+    .get(`https://api.themoviedb.org/3/search/movie?api_key=${MOVIE_API_KEY}&query=${movie}&page=${selected}`)
     .then(({ data }) => {
       dispatch({ type: EXAMPLE_TWO.UPDATE, payload: data });
       dispatch({ type: EXAMPLE_TWO.LOADED });
