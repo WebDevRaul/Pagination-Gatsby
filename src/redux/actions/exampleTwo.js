@@ -6,7 +6,7 @@ export const updateMovie =  movie => dispatch => {
   dispatch({ type: EXAMPLE_TWO.LOADING });
   dispatch({ type: EXAMPLE_TWO.SET_MOVIE, payload: movie });
   axios
-    .get(`http://api.themoviedb.org/3/search/movie?api_key=${MOVIE_API_KEY}&query=${movie}`)
+    .get(`https://api.themoviedb.org/3/search/movie?api_key=${MOVIE_API_KEY}&query=${movie}`)
     .then(({ data }) => {
       dispatch({ type: EXAMPLE_TWO.UPDATE, payload: data });
       dispatch({ type: EXAMPLE_TWO.LOADED });
