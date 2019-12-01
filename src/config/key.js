@@ -1,3 +1,3 @@
 module.exports = {
-  MOVIE_API_KEY: process.env.MOVIE_API_KEY
+  GATSBY_MOVIE_API_KEY: process.env.GATSBY_MOVIE_API_KEY
 }
