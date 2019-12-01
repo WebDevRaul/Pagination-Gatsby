@@ -11,11 +11,11 @@ const StyledPagination = styled.section`
       display: flex;
       justify-content: center;
       align-content: center;
-      background: ${Primary};
-      color: ${Secondary};
+      background: ${Secondary};
+      color: ${Primary};
       &:hover {
-        background: ${Secondary};
-        color: ${Primary};
+        background: ${Primary};
+        color: ${Secondary};
       }
     }
     .buttons {

@@ -12,6 +12,15 @@ const StyledNavbar = styled.nav`
         display: flex;
         justify-content: space-between;
         align-items: center;
+        a {
+          text-transform: uppercase;
+          color: ${Primary};
+          font-weight: 500;
+          letter-spacing: ${Spacing};
+          &:hover {
+            color: ${Secondary};
+          }
+        }
         button {
           display: none;
         }

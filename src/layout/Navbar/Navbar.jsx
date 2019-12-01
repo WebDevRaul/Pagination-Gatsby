@@ -22,8 +22,8 @@ const Navbar = ({ siteTitle }) => {
             </button>
           </div>
           <ul className={classnames('nav-links', {'show-nav' : isOpen})} >
-            <li><Link to='/pagination-one' onClick={onClick}>pag 1</Link></li>
-            <li><Link to='/pagination-two' onClick={onClick}>pag 2</Link></li>
+            <li><Link to='/pagination-one' onClick={onClick}>Example 1</Link></li>
+            <li><Link to='/pagination-two' onClick={onClick}>Example 2</Link></li>
           </ul>
         </div>
       </nav>

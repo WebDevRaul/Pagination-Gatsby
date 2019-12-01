@@ -1,5 +1,0 @@
-add loading to search btn
-title responsive 
-https://image.tmdb.org/t/p/w185/lZpWprJqbIFpEV5uoHfoK0KCnTW.jpg
-https://image.tmdb.org/t/p/w185
-/lZpWprJqbIFpEV5uoHfoK0KCnTW.jpg

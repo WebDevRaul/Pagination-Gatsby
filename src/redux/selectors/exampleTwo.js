@@ -19,6 +19,11 @@ export const state_two_pages = createSelector(
   state => state.total_pages
 );
 
+export const state_two_page = createSelector(
+  [select_two_state],
+  state => state.page
+);
+
 export const state_two_isLoading = createSelector(
   [select_isLoading_state],
   state => state.isLoading
