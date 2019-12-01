@@ -22,7 +22,7 @@ const Pagination = ({ nextPage, pages }) => {
           pageRangeDisplayed={3}
           onPageChange={({ selected }) => nextPage({ movie: 'Matrix', page:selected })}
           activeClassName={'active'}
-          onPageChange={e => window.scrollTo({top: 245, behavior: 'smooth' })}
+          // onPageChange={e => window.scrollTo({top: 245, behavior: 'smooth' })}
         />
       </div>
     </StyledPagination>

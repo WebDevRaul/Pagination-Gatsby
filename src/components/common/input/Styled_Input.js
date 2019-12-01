@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Primary, Black, White, Transition } from '../../../layout/layout.scss';
+import { Primary, Black, Transition } from '../../../layout/layout.scss';
 
 const shrinkLabel = () => `
   top: -14px;
