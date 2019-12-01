@@ -24,7 +24,7 @@ const Pagination = ({ nextPage, pages, movie, page }) => {
           pageCount={pages}
           marginPagesDisplayed={1}
           pageRangeDisplayed={3}
-          onPageChange={({ selected }) => changePage(selected)}
+          onPageChange={({ selected }) => changePage(selected+1)}
           activeClassName={'active'}
           forcePage={page-1}
         />
