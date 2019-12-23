@@ -1,15 +1,14 @@
-# Title
-
-## Title
+# Pagination examples
+Two different paginations example with data from jsonplaceholder && themoviedb.org .
 
 ## Screenshots
-| 1 | 2 | 3 | 4 |
+| Home | Example One | Example Two | More info |
 |:----:|:----:|:----:|:-------:|
-|![](image/) | ![](image/) | ![](image/)| ![](image/)
+|![](image/home.jpg) | ![](image/exampleOne.jpg) | ![](image/exampleTwo.jpg)| ![](image/moreInfo.jpg)
 
 ## Built With
 - Front-end
-"axios": "^0.19.0",
+  - "axios": "^0.19.0",
   - "babel-plugin-styled-components": "^1.10.6",
   - "bootstrap": "^4.4.1",
   - "classnames": "^2.2.6",
