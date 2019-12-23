@@ -35,6 +35,37 @@ const StyledPagination = styled.section`
       }
     }
   }
+
+  @media (max-width: 576px) {
+    .pagination {
+      font-size: .9em;
+      ul {
+        li {
+          margin: 0 4px;
+        }
+      }
+    }
+  }
+  @media (max-width: 425px) {
+    .pagination {
+      font-size: .8em;
+      ul {
+        li {
+          margin: 0 2px;
+        }
+      }
+    }
+  }
+  @media (max-width: 375px) {
+    .pagination {
+      font-size: .7em;
+      ul {
+        li {
+          margin: 0;
+        }
+      }
+    }
+  }
 `
 
 export default StyledPagination;
