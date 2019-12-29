@@ -1,5 +1,5 @@
 # Pagination examples
-Two different paginations example with data from jsonplaceholder && themoviedb.org .
+Two different paginations example with data from jsonplaceholder & themoviedb.org .
 
 ## Screenshots
 | Home | Example One | Example Two | More info |
