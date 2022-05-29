@@ -12,6 +12,7 @@ const Search = ({ updateMovie }) => {
   
   useEffect(() => {
     setMovie('matrix');
+    updateMovie("matrix")
     return;
   },[])
 
